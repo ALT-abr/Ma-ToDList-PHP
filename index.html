@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ma ToDo</title>
+</head>
+<body>
+    <!-- le side bar gauche  -->
+    <header class="sidebar-left">
+        <!-- la section de logo -->
+        <section class="logo">
+            <img src="assets/logo.png" alt="logo">
+            <h1>Ma ToDo</h1>
+        </section>
+
+        <hr>
+
+        <!-- la section des cart de profil -->
+        <section class="profil">
+            <section class="profil-card child">
+                <img src="assets/enfant-avatar.png" alt="avatar d'enfant">
+                <div>
+                    <h2>Enfant</h2>
+                    <h3>5 - 12ans</h3>
+                </div>
+            </section>
+            
+            <section class="profil-card adult">
+                <img src="assets/adult-avatar.png" alt="avatar d'adulte">
+                <div>
+                    <h2>Adult</h2>
+                    <h3>13ans +</h3>
+                </div>
+            </section>
+        </section>
+        
+        <hr>
+
+        <!-- la section des lien de navigation entre les page -->
+        <nav class="menu">
+            <ul>
+                <li><i class="fa-solid fa-house"></i> Mes taches</li>
+                <li><i class="fa-solid fa-chart-pie"></i> Statistiques</li>
+                <li><i class="fa-solid fa-gear"></i> Paramètres</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- -------------------------------- la section top bar avec la bar de recherche et la cart date --------------------------------------- -->  
+        <section class="topbar">
+            <section class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Rechercher une tâche ...</p>
+            </section>
+            
+            <section class="date">
+                <i class="fa-regular fa-calendar"></i>
+                <p>lundi 28 septembre 2026</p>
+            </section>
+        </section>
+        
+        <!-- -------------------------------- la section qui contien les taches et le formulair pour ajoute une --------------------------------- -->
+        <section class="container">
+            <section class="tasks-container">
+                <h2>Hi! there,</h2>
+                <h3>Quelles tâches veux-tu accomplir aujourd'hui ?</h3>
+                <section class="tasks" id="taches">
+                    
+                </section>
+            </section>
+ 
+            <!-- ----------------------------------------------- le formulaire ------------------------------------------------------------------- -->
+            <section class="sidebar-right" id="list_taches">
+                <h2>Nouvelle tâche</h2>
+                <form >
+                    <label for="task-name">Titre de la tache</label> 
+                    <br>
+                    <input type="text" name="task-name" id="nom_tache" placeholder="Ex : Faire les courses">
+
+                    <br>
+                    <br>
+                    
+                    <label for="date">Date</label>
+                    <br>
+                    <input type="date" name="date" id="date_tache">
+
+                    <br>
+                    <br>
+
+                    <label for="priority">Priorité</label>
+                    <br>
+                    <select name="priority" id="priorite_tache">
+                        <option value="low">Basse</option>
+                        <option value="medium">Moyenne</option>
+                        <option value="high">Haute</option>
+                    </select>
+
+                    <br>
+                    <br>
+                    
+                    <label for="category">Catégorie</label>
+                    <br>
+                    <select name="category" id="categorie_tache">
+                        <option value="personal">Personnel</option>
+                        <option value="work">Travail</option>
+                        <option value="school">École</option>
+                        <option value="home">Maison</option>
+                    </select>
+
+                    <br>
+                    <br>
+
+                </form>
+                <button type="reset">Annuler</button>
+                <button type="submit" id="bouton_valider">Ajouter la tâche</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
